@@ -1,0 +1,22 @@
+publiccodeYmlVersion: "0.4"
+
+name: RCM OSS
+url: "https://github.com/SchweizerischeBundesbahnen/rcm-dx"
+
+developmentStatus: stable
+
+softwareType: specification
+
+description:
+  en:
+    shortDescription: >
+          RCM by SBB comprises a suite of products for rail condition monitoring.
+          Based on the open-source data format RCM-DX (RCM Data eXchange), RCM
+          enables easy accessibility and visualization of railway diagnostic data.
+legal:
+  license: EPL-2.0
+
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - en

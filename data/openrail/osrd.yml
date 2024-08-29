@@ -1,0 +1,22 @@
+publiccodeYmlVersion: "0.4"
+
+name: OSRD
+url: "https://github.com/OpenRailAssociation/osrd"
+platforms:
+  - web
+
+developmentStatus: development
+
+softwareType: "standalone/web"
+
+description:
+  en:
+    shortDescription: >
+          OSRD is an open source web application for railway infrastructure design, capacity analysis, timetabling and simulation.
+legal:
+  license: LGPL-3.0-or-later
+
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - fr

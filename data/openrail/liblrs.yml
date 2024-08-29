@@ -1,0 +1,15 @@
+publiccodeYmlVersion: "0.4"
+
+name: libLRS
+url: "https://github.com/osrd-project/liblrs/"
+
+developmentStatus: development
+
+softwareType: library
+
+description:
+  en:
+    shortDescription: >
+          The goal of the library is to have a flexible, high performance and easy to integrate linear referencing systems (LRS) library that can be used in any system to manipulate LRSs.
+legal:
+  license: MIT

@@ -1,0 +1,10 @@
+publiccodeYmlVersion: "0.4"
+
+name: DAC Migration DSS
+
+developmentStatus: concept
+
+description:
+  en:
+    shortDescription: >
+          Within the next years around 500 K freight wagons all over Europe owned and operated by various corporations will be converted from screw couplers to digital automatic couplers (DAC). To facilitate the migration process, a decision support system (DSS) is planned under the project.

@@ -1,0 +1,22 @@
+publiccodeYmlVersion: "0.4"
+
+name: Netzgrafik-Editor
+url: "https://github.com/SchweizerischeBundesbahnen/netzgrafik-editor-frontend"
+
+developmentStatus: stable
+
+softwareType:
+- standalone/web
+
+description:
+  en:
+    shortDescription: >
+          Netzgrafik-Editor is now a mature tool for creating and analyzing regular-interval timetables. It's versatile for logistics planning in various domains. Features include interactive editing, graphic timetables, trainrun editing, and logistics analysis.
+legal:
+  license: Apache-2.0
+
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - en
+    - de
