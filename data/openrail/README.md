@@ -1,0 +1,1 @@
+This is a place to hold temporary publicode.yml files for [projects hosted by the OpenRail Association](https://github.com/OpenRailAssociation/technical-committee/blob/main/projects.md). The goal is to have the files within their respective repositories.
