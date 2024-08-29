@@ -4,7 +4,7 @@ This repository collects reference to open source projects in the context of rai
 
 ## Project metadata
 
-We collect metadata for projects in a structured format in this repository or as links to metadata in other places. The format we use is based on publiccode.yml.
+We collect metadata for projects in a structured format in this repository or as links to metadata in other places. The format we use is based on [publiccode.yml](https://yml.publiccode.tools/).
 
 ## Landscape display
 
