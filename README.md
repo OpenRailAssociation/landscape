@@ -6,6 +6,8 @@ This repository collects reference to open source projects in the context of rai
 
 We collect metadata for projects in a structured format in this repository or as links to metadata in other places. The format we use is based on [publiccode.yml](https://yml.publiccode.tools/).
 
+If you would like any project to be added to the landscape, please [open an issue](https://github.com/OpenRailAssociation/landscape/issues/new/choose) and add the relevant information there.
+
 ## Landscape display
 
 The landscape display is realized as a Hugo-generated static web site. This repo contains the necessary code, templates, and resources.
