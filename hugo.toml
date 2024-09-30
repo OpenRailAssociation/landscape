@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'cornelius.github.io/landscape/'
 languageCode = 'en-us'
 title = 'Open Rail and Transport Landscape'
 theme = 'hugo-landscape-theme'
