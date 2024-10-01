@@ -1,0 +1,10 @@
+name = 'Hugo Landscape Theme'
+license = 'Apache-2'
+licenselink = 'https://github.com/OpenRailAssociation/project-template/blob/main/LICENSE'
+description = 'Theme for displaying a project landscape.'
+
+homepage = 'https://github.com/OpenRailAssociation'
+
+[author]
+  name = 'Cornelius Schumacher'
+  homepage = 'https://cornelius.tech'

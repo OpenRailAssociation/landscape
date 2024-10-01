@@ -1,0 +1,17 @@
+{{ range $key, $project := .Site.Data.openrail }}
+
+  {{ $content := dict
+    "mediaType" "text/markdown"
+    "value" $project.description.en.shortDescription
+  }}
+
+  {{ $page := dict
+    "content" $content
+    "kind" "page"
+    "path" $key
+    "title" $project.name
+  }}
+
+  {{ $.AddPage $page }}
+
+{{ end }}
