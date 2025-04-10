@@ -20,3 +20,8 @@ localisation:
   availableLanguages:
     - en
     - de
+
+businessCapabilities:
+  profile: railway
+  domains:
+    - Plan Long Term

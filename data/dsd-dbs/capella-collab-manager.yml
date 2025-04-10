@@ -1,0 +1,21 @@
+publiccodeYmlVersion: "0.4"
+
+name: Capella Collaboration Manager
+url: "https://github.com/DSD-DBS/capella-collab-manager"
+
+developmentStatus: stable
+
+softwareType: "standalone/web"
+
+description:
+  en:
+    shortDescription: >
+          A web platform for collaboration on MBSE and Capella projects.
+
+legal:
+  license: Apache-2.0
+
+businessCapabilities:
+  profile: railway
+  capabilities:
+    - Provide Rail Network
