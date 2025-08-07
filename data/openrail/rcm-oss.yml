@@ -20,3 +20,9 @@ localisation:
   localisationReady: true
   availableLanguages:
     - en
+
+businessCapabilities:
+  profile: railway
+  capabilities:
+    - Provide Rail Network
+

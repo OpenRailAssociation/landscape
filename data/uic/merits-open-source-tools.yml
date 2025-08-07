@@ -1,0 +1,20 @@
+publiccodeYmlVersion: "0.4"
+
+name: MERITS Transformation Tools
+url: "https://github.com/UnionInternationalCheminsdeFer/MERITS-open-source-tools"
+
+developmentStatus: stable
+
+softwareType: "library"
+
+description:
+  en:
+    shortDescription: >
+          Transformation of both timetable and location data structures between MERITS EDIFACT and CSV in both directions.
+legal:
+  license: Apache-2.0
+
+businessCapabilities:
+  profile: railway
+  capabilities:
+    - Plan Passenger Trip

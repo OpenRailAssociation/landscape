@@ -1,0 +1,21 @@
+publiccodeYmlVersion: "0.4"
+
+name: RailLabel
+url: "https://github.com/DSD-DBS/raillabel"
+
+developmentStatus: development
+
+softwareType: "library"
+
+description:
+  en:
+    shortDescription: >
+          A devkit for working with recorded and annotated train ride data from Deutsche Bahn.
+
+legal:
+  license: Apache-2.0
+
+businessCapabilities:
+  profile: railway
+  capabilities:
+    - Provide Rail Network

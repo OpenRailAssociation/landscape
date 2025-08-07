@@ -1,0 +1,18 @@
+publiccodeYmlVersion: "0.4"
+
+name: nextex-parser-java
+url: https://github.com/entur/netex-parser-java
+
+softwareType: "library"
+
+description:
+  en:
+    shortDescription: >
+          Parse NeTEx files and lookup entities in an index
+legal:
+  license: EUPL-1.2 with modifications
+
+businessCapabilities:
+  profile: railway
+  capabilities:
+    - Plan Passenger Trip

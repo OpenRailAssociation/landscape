@@ -1,0 +1,20 @@
+publiccodeYmlVersion: "0.4"
+
+name: OSDM Demo App
+url: "https://github.com/UnionInternationalCheminsdeFer/OSDM-demo-app"
+
+developmentStatus: development
+
+softwareType: "standalone/web"
+
+description:
+  en:
+    shortDescription: >
+          To showcase the power of OSDM the Demo App aims to provide a working app to interesting parties to start implementing their apps and clients. The app covers the complete booking flow, including ancillary services, and supports trains, buses or other means of public transport. The code found here is the second implementation based on the results of the Drei-Länder-Hack 2024. Further development includes the implementation of seat reservations and after-sales
+legal:
+  license: Apache-2.0
+
+businessCapabilities:
+  profile: railway
+  capabilities:
+    - Sell Passenger Transport

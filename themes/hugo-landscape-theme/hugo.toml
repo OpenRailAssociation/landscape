@@ -17,6 +17,11 @@ name = 'Projects'
 pageRef = '/projects'
 weight = 30
 
+[[menus.main]]
+name = 'Capabilities'
+pageRef = '/capabilities'
+weight = 40
+
 [module]
   [module.hugoVersion]
     extended = false

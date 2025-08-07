@@ -1,4 +1,5 @@
-{{ range $key, $project := .Site.Data.openrail }}
+{{ $data := index .Site.Data "dsd-dbs" }}
+{{ range $key, $project := $data }}
 
   {{ $content := dict
     "mediaType" "text/markdown"

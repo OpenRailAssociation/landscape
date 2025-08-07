@@ -1,0 +1,20 @@
+publiccodeYmlVersion: "0.4"
+
+name: Driver Advisory System
+url: "https://github.com/SchweizerischeBundesbahnen/DAS"
+
+developmentStatus: stable
+
+softwareType: "standalone/mobile"
+
+description:
+  en:
+    shortDescription: >
+          Driver Advisory System is an innovative tool designed to assist train drivers in the delivery of efficient and punctual train services. By integrating a wide range of data sources, including live positioning, infrastructure characteristics, and real-time transport plans, the system calculates and presents the ideal driving profile for each journey.
+legal:
+  license: GPL-3.0-or-later
+
+businessCapabilities:
+  profile: railway
+  capabilities:
+    - Drive Train

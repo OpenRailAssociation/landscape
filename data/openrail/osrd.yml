@@ -20,3 +20,10 @@ localisation:
   localisationReady: true
   availableLanguages:
     - fr
+
+businessCapabilities:
+  profile: railway
+  capabilities:
+    - Plan Long Term
+    - Plan Short Term
+
