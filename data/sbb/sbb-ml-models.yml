@@ -1,0 +1,32 @@
+publiccodeYmlVersion: "0.4"
+
+name: SBB ML Models
+url: "https://github.com/SchweizerischeBundesbahnen/sbb-ml-models"
+
+platforms:
+  - android
+  - ios
+
+developmentStatus: development
+
+softwareType: "library"
+
+description:
+  en:
+    shortDescription: >
+      Trained YOLOv5 object‑detection models and tooling for running models on mobile
+      (CoreML for iOS, TensorFlow Lite for Android), targeting objects in trains and stations.
+
+legal:
+  license: MIT
+
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - en
+
+businessCapabilities:
+  profile: railway
+  capabilities:
+    - Provide Passenger Facilities
+    - Maintain Rolling Stock

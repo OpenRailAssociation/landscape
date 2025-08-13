@@ -1,0 +1,27 @@
+publiccodeYmlVersion: "0.4"
+
+name: SBB RASTA Stack
+url: "https://github.com/SchweizerischeBundesbahnen/sbb-rasta-stack"
+
+developmentStatus: development
+
+softwareType: "standalone/web"
+
+description:
+  en:
+    shortDescription: >
+      The RASTA Stack is a reference architecture and set of components for railway
+      traffic management and operations systems. It enables the integration of
+      heterogeneous systems, supports real-time data exchange, and provides a
+      foundation for building scalable, interoperable railway applications.
+
+legal:
+  license: Apache-2.0
+
+localisation:
+  localisationReady: false
+
+businessCapabilities:
+  profile: railway
+  capabilities:
+    - Provide Data Network

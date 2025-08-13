@@ -1,0 +1,28 @@
+publiccodeYmlVersion: "0.4"
+
+name: MATSim
+url: "https://github.com/matsim-org/matsim-libs"
+
+developmentStatus: stable
+
+softwareType: "library"
+
+description:
+  en:
+    shortDescription: >
+      MATSim (Multi-Agent Transport Simulation) is an open-source framework and set
+      of Java libraries for large-scale agent-based transport simulations, supporting
+      demand modelling, mobility simulation, iterative re-planning, and analysis.
+
+legal:
+  license: GPL-2.0-or-later
+
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - en
+
+businessCapabilities:
+  profile: railway
+  capabilities:
+    - Define Price Policy
