@@ -1,0 +1,22 @@
+publiccodeYmlVersion: "0.4"
+
+name: MOTIS
+url: "https://github.com/motis-project/motis"
+platforms:
+  - web
+
+developmentStatus: production
+
+softwareType: "standalone/web"
+
+description:
+  en:
+    shortDescription: >
+          multimodal routing, geocoding, and map tiles
+legal:
+  license: MIT
+
+businessCapabilities:
+  profile: railway
+  capabilities:
+    - Plan Passenger Trip
