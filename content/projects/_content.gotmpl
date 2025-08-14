@@ -1,0 +1,22 @@
+{{ range $group, $projects := .Site.Data }}
+  {{ range $key, $project := $projects }}
+    {{ $content := dict
+      "mediaType" "text/markdown"
+      "value" $project.description.en.shortDescription
+    }}
+
+    {{ $page := dict
+      "content" $content
+      "kind" "page"
+      "path" (printf "projects/%s/%s" $group $key)
+      "title" $project.name
+      "params" (dict
+        "capabilities" $project.businessCapabilities.capabilities
+        "url" $project.url
+        "license" $project.legal.license
+      )
+    }}
+
+    {{ $.AddPage $page }}
+  {{ end }}
+{{ end }}
