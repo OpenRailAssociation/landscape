@@ -14,8 +14,7 @@ softwareType: "library"
 description:
   en:
     shortDescription: >
-      Trained YOLOv5 object‑detection models and tooling for running models on mobile
-      (CoreML for iOS, TensorFlow Lite for Android), targeting objects in trains and stations.
+      Trained YOLOv5 object‑detection models and tooling for running models on mobile (CoreML for iOS, TensorFlow Lite for Android), targeting objects in trains and stations.
 
 legal:
   license: MIT
