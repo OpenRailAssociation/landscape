@@ -1,7 +1,4 @@
-﻿UID;Level;Name ;Description;"Actor
-RU = Railway Undertaker
-IM = Infrastructure Manager
-TA = Ticketing Authority"
+﻿UID;Level;Name ;Description;"Actor (RU = Railway Undertaker, IM = Infrastructure Manager, TA = Ticketing Authority)"
 1,00;1;Inform Customer;Provide information about transports for customers;RU/IM/TA
 1,05;2;Publish Passanger Timetable and Route Information;Provide trip planning basic infornmation like timetables and maps for overview information and non digital trip planning.;
 1,10;2;Plan Passenger Trip;Provide digital trip planning tools für mobile and fixed devices.;RU/TA
