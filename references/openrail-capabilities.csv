@@ -13,7 +13,7 @@
 2.50,2,Care For Passengers,"Provide services for customers during the journey on the train as well as before and after boarding the train.",RU
 2.60,2,Care For Goods,"Provide services for the transport of goods during the rail transport as well as before and after the transport. This can include services for safe transportation, loading and unloading as well as custom services.",RU
 2.70,2,Manage Emergency,"Coordinate help in an emergency situation. Alarm or dispatch emergency teams and equipment. This includes the operation of emergency trains, firefighters and ambulances.",IM
-2.80,2,Monitor and control Train Path ,"Monitoring via Sensors, Axles Counter, Signalling,  Hotbox, Gage control. Control via Interlocking system.",IM
+2.80,2,Monitor and control Train Path ,"Monitoring via Sensors, Axles Counter, Signaling, Hotbox, Gage control. Control via Interlocking system.",IM
 2.90,2,Monitor Rolling Stock,"Monitor rolling stock during operation with sensors on the train and with wayside installations.",RU
 3.00,1,Market and Sale Services,"Market and sell transport services for passengers and goods according to demand.",
 3.10,2,Sell Freight Transport,"Sell transport services to freight customers.",RU
@@ -21,11 +21,11 @@
 3.40,2,Forecast Traffic,"Forecast long-term demand for rail traffic and modal split.",RU/IM/TA
 3.50,2,Define Price and Product Policy,"Define pricing systems and policies for rail services.",RU/IM
 4.00,1,Provide  Railway Infrastructure,"Design, build, operate and maintain infrastructure needed for rail transport.",IM
-4.10,2,Provide Rail Network,"Design, build and maintain rail network including track, engineering structures, tunnels, bridges, catenary, signaling and control technology",IM/Supplier
-4.20,2,Provide Passenger Facilities,"Design, build, maintain and operate passenger facilities",IM/Supplier
-4.30,2,Provide Freight Facilities,"Design, build, maintain and operate freight facilities including marshalling yards.",IM/Supplier
-4.40,2,Provide Energy Supply,"Design, build, maintain and operate energy supply and distribution facilities including buying energy from suppliers.",IM/Supplier
-4.50,2,Provide Data Network,"Provide connectivity for interlocking, communication and general data transfer.",IM/Supplier
+4.10,2,Provide Rail Network,"Design, build, and maintain rail network including track, engineering structures, tunnels, bridges, catenary, signaling, and control technology",IM/Supplier
+4.20,2,Provide Passenger Facilities,"Design, build, maintain, and operate passenger facilities",IM/Supplier
+4.30,2,Provide Freight Facilities,"Design, build, maintain, and operate freight facilities including marshalling yards.",IM/Supplier
+4.40,2,Provide Energy Supply,"Design, build, maintain, and operate energy supply and distribution facilities including buying energy from suppliers.",IM/Supplier
+4.50,2,Provide Data Network,"Provide connectivity for interlocking, communication, and general data transfer.",IM/Supplier
 5.00,1,Manage Network Capacity,"Design, Operate long term planning to short term planning",IM
 5.10,2,Plan Long Term,"Long term timetable and studies. Including timetable planning for long-planned construction and track works",IM/Supplier
 5.20,2,Plan Short Term,"Short term path request, Track Occupancy Diagram",IM
@@ -36,12 +36,12 @@
 6.20,2,Manage Fleet Planning,"Plan long-term capacity of rolling stock to meet long-term demand.",RU
 6.30,2,Maintain Rolling stock,"Predictive maintenance, long term and daily planning maintenance",RU/Supplier
 6.40,2,Procure Rolling Stock,"Procurement of rolling stock by the railway company from the manufacturer",RU/Supplier
-6.50,2,Manufacture Rolling Stock,"Design and manufacureof rolling stock",RU/Supplier
+6.50,2,Manufacture Rolling Stock,"Design and manufacture rolling stock",RU/Supplier
 7.00,1,Provide Personnel,"Plan and prepare personnel for railway-specific tasks. Plan and provide the necessary personnel capacities.",IM/RU
 7.10,2,Roster Staff,"Plan and assign work schedules for personnel. Create a roster which determines when and where an employee is assigned to a task. This includes the allocation of staff to specific routes and services taking into account the necessary knowledge and legal requirements.",RU
 7.20,2,Plan Personal Capacities,"Plan long-term demand and supply of personnel capacities in the different personnel categories. Define demand for recruiting and training.",IM/RU
 7.30,2,Recruit and Train Employees,"Recruit and train employees in all categories like locomotive drivers, train attendants, signal box personnel, technical maintenance staff for rolling stock and signal technology, as well as personnel for the construction and maintenance of infrastructure. Create and maintain the necessary learning content and tools, including simulators.",IM/RU
-8.00,1,Provide Information Technologie,"",Railway Company/Supplier
+8.00,1,Provide Information Technology,"",Railway Company/Supplier
 8.10,2,Provide Application Services,"Design, build, buy or share software and operate applications. Buy application services.",Railway Company/Supplier
 8.20,2,Provide Data Center Services,"Provide or buy data center services.",Railway Company/Supplier
 8.30,2,Manage IT Security,"Manage IT security",Railway Company/Supplier
