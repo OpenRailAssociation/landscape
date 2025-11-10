@@ -24,4 +24,4 @@ localisation:
 businessCapabilities:
   profile: railway
   domains:
-    - Plan Long Term
+    - capacity/long-term

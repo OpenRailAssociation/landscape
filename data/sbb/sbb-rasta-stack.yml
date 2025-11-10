@@ -21,4 +21,4 @@ localisation:
 businessCapabilities:
   profile: railway
   capabilities:
-    - Provide Data Network
+    - infrastructure/data-network

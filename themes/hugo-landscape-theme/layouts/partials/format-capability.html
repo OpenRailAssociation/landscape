@@ -1,4 +1,25 @@
-{{/* Takes a capability name as parameter and returns formatted version */}}
-{{ $name := . }}
-{{ $prefix := "🔧 " }}  {{/* You can change this prefix to whatever you want */}}
-{{ return printf "%s%s" $prefix $name }}
+{{/* Takes a capability ID as parameter and returns formatted name */}}
+{{ $input := . }}
+{{ $prefix := "🔧 " }}
+{{ $result := $input }}
+
+{{/* Read and parse the CSV file */}}
+{{ $csvData := os.ReadFile "openrail-capabilities.csv" }}
+{{ $lines := split $csvData "\n" }}
+
+{{ range after 1 $lines }}
+    {{ $fields := split . "," }}
+    {{ if gt (len $fields) 2 }}
+        {{ $id := index $fields 2 }}
+        {{ if eq (lower $id) (lower $input) }}
+            {{ $name := index $fields 3 }}
+            {{ $name = strings.TrimPrefix "\"" $name }}
+            {{ $name = strings.TrimSuffix "\"" $name }}
+            {{ $result = $name }}
+            {{ warnf "Found case-insensitive ID match: %s -> %s" $input $result }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ $result = printf "%s%s" $prefix $result }}
+{{ return $result }}

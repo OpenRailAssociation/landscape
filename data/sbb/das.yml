@@ -17,4 +17,4 @@ legal:
 businessCapabilities:
   profile: railway
   capabilities:
-    - Drive Train
+    - operations/train-driving

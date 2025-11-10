@@ -17,4 +17,4 @@ legal:
 businessCapabilities:
   profile: railway
   capabilities:
-    - Sell Passenger Transport
+    - sales/passenger

@@ -1,0 +1,54 @@
+﻿UID,Level,ID,Name,Description,"Actor (RU = Railway Undertaker, IM = Infrastructure Manager, TA = Ticketing Authority)"
+1.00,1,inform-customer,Inform Customer,"Provide information about transports for customers",RU/IM/TA
+1.05,2,inform-customer/timetable,Publish Passenger Timetable and Route Information,"Provide trip planning basic information like timetables and maps for overview information and non-digital trip planning.",
+1.10,2,inform-customer/trip-planning,Plan Passenger Trip,"Provide digital trip planning tools for mobile and fixed devices.",RU/TA
+1.20,2,inform-customer/realtime-passenger,Inform passenger in real time,"Provide real-time passenger information in vehicles, in stations and on customer devices.",RU/IM/TA
+1.30,2,inform-customer/realtime-freight,Inform Freight Customer in real time,"Provide real-time information for freight customers about the status of the transport and estimated time of arrival.",RU/IM
+1.40,2,inform-customer/route-guidance,Guide passenger to alternative routes,"Recommend and guide travelers to alternative routes during disruptions",RU/IM
+2.00,1,operations,"Perform passenger and freight transport operations","Provide services for passengers and goods during, before and after transport. Monitor train operations, vehicles, and infrastructure in operation. Manage disruptions and dispatch in short-term track capacity, rolling stock and staff according to the situation.",IM
+2.10,2,operations/staff-dispatch,Short-term Staff Dispatching,"Adjustments of the roster due to unplanned short-term staff shortages because an employee cannot start their shift or cannot perform a scheduled task during their shift.",RU
+2.20,2,operations/rolling-stock-dispatch,Short-term Rolling Stock Dispatching,"Adjustments of the roster due to unplanned short-term loss of the availability of a vehicle like a train, engine or carriage.",RU
+2.30,2,operations/train-driving,Drive train,"Train driving (e.g. including Driver Advisory System)",RU
+2.40,2,operations/ticket-inspection,Inspect ticket,"Check tickets on the train or before and after boarding or entering the station.",RU
+2.50,2,operations/passenger-care,Care For Passengers,"Provide services for customers during the journey on the train as well as before and after boarding the train.",RU
+2.60,2,operations/goods-care,Care For Goods,"Provide services for the transport of goods during the rail transport as well as before and after the transport. This can include services for safe transportation, loading and unloading as well as custom services.",RU
+2.70,2,operations/emergency,Manage Emergency,"Coordinate help in an emergency situation. Alarm or dispatch emergency teams and equipment. This includes the operation of emergency trains, firefighters and ambulances.",IM
+2.80,2,operations/path-control,Monitor and control Train Path ,"Monitoring via Sensors, Axles Counter, Signaling, Hotbox, Gage control. Control via Interlocking system.",IM
+2.90,2,operations/stock-monitoring,Monitor Rolling Stock,"Monitor rolling stock during operation with sensors on the train and with wayside installations.",RU
+3.00,1,sales,Market and Sale Services,"Market and sell transport services for passengers and goods according to demand.",
+3.10,2,sales/freight,Sell Freight Transport,"Sell transport services to freight customers.",RU
+3.30,2,sales/passenger,Sell Passenger Transport,"Sell tickets and other additional services to passengers.",RU
+3.40,2,sales/forecasting,Forecast Traffic,"Forecast long-term demand for rail traffic and modal split.",RU/IM/TA
+3.50,2,sales/pricing,Define Price and Product Policy,"Define pricing systems and policies for rail services.",RU/IM
+4.00,1,infrastructure,Provide  Railway Infrastructure,"Design, build, operate and maintain infrastructure needed for rail transport.",IM
+4.10,2,infrastructure/rail-network,Provide Rail Network,"Design, build, and maintain rail network including track, engineering structures, tunnels, bridges, catenary, signaling, and control technology",IM/Supplier
+4.20,2,infrastructure/passenger,Provide Passenger Facilities,"Design, build, maintain, and operate passenger facilities",IM/Supplier
+4.30,2,infrastructure/freight,Provide Freight Facilities,"Design, build, maintain, and operate freight facilities including marshalling yards.",IM/Supplier
+4.40,2,infrastructure/energy,Provide Energy Supply,"Design, build, maintain, and operate energy supply and distribution facilities including buying energy from suppliers.",IM/Supplier
+4.50,2,infrastructure/data-network,Provide Data Network,"Provide connectivity for interlocking, communication, and general data transfer.",IM/Supplier
+5.00,1,capacity,Manage Network Capacity,"Design, Operate long term planning to short term planning",IM
+5.10,2,capacity/long-term,Plan Long Term,"Long term timetable and studies. Including timetable planning for long-planned construction and track works",IM/Supplier
+5.20,2,capacity/short-term,Plan Short Term,"Short term path request, Track Occupancy Diagram",IM
+5.30,2,capacity/sales,Sell Network Capacity,"Selling capacity to railway undertakers (long and short term)",IM
+5.40,2,capacity/yard,Manage Yard,"Manage marshalling and shunting",IM
+6.00,1,rolling-stock,Provide Rolling Stock,"Design, build, maintenance and management of rolling stock",RU/Supplier
+6.10,2,rolling-stock/roster,Roster Rolling Stock,"Plan and assign work schedules for rolling stock. This involves the creation of a roster which determines when and where vehicles are required and assigned to tasks. This includes the allocation of rolling stock to specific routes and services.",RU
+6.20,2,rolling-stock/fleet,Manage Fleet Planning,"Plan long-term capacity of rolling stock to meet long-term demand.",RU
+6.30,2,rolling-stock/maintenance,Maintain Rolling stock,"Predictive maintenance, long term and daily planning maintenance",RU/Supplier
+6.40,2,rolling-stock/procurement,Procure Rolling Stock,"Procurement of rolling stock by the railway company from the manufacturer",RU/Supplier
+6.50,2,rolling-stock/manufacture,Manufacture Rolling Stock,"Design and manufacture rolling stock",RU/Supplier
+7.00,1,personnel,Provide Personnel,"Plan and prepare personnel for railway-specific tasks. Plan and provide the necessary personnel capacities.",IM/RU
+7.10,2,personnel/roster,Roster Staff,"Plan and assign work schedules for personnel. Create a roster which determines when and where an employee is assigned to a task. This includes the allocation of staff to specific routes and services taking into account the necessary knowledge and legal requirements.",RU
+7.20,2,personnel/planning,Plan Personal Capacities,"Plan long-term demand and supply of personnel capacities in the different personnel categories. Define demand for recruiting and training.",IM/RU
+7.30,2,personnel/training,Recruit and Train Employees,"Recruit and train employees in all categories like locomotive drivers, train attendants, signal box personnel, technical maintenance staff for rolling stock and signal technology, as well as personnel for the construction and maintenance of infrastructure. Create and maintain the necessary learning content and tools, including simulators.",IM/RU
+8.00,1,it,Provide Information Technology,"",Railway Company/Supplier
+8.10,2,it/applications,Provide Application Services,"Design, build, buy or share software and operate applications. Buy application services.",Railway Company/Supplier
+8.20,2,it/datacenter,Provide Data Center Services,"Provide or buy data center services.",Railway Company/Supplier
+8.30,2,it/security,Manage IT Security,"Manage IT security",Railway Company/Supplier
+9.00,1,management,Provide General Management and Administration,"",Railway Company
+9.10,2,management/corporate,Manage Corporate,"General management of a company",Railway Company
+9.20,2,management/hr,Manage Human Resources,"Human Resources management of a company",Railway Company
+9.30,2,management/finance,Manage Finance and Controlling,"Financial management of a company",Railway Company
+9.40,2,management/legal,Manage Compliance and Legal Affairs,"Ensure that the company complies with applicable laws and regulations while conducting its legal affairs in its best interest",Railway Company
+9.50,2,management/supply-chain,Manage Supply Chain Management,"General supply chain management processes.",Railway Company
+9.60,2,management/real-estate,Manage Real Estate,"Manage properties and buildings for corporate needs.",Railway Company

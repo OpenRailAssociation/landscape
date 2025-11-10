@@ -17,4 +17,4 @@ legal:
 businessCapabilities:
   profile: railway
   capabilities:
-    - Plan Passenger Trip
+    - inform-customer/trip-planning
