@@ -16,7 +16,13 @@ For a given taxonomy, renders a list of terms assigned to the page.
     <div>{{ $label }}:</div>
     <ul>
       {{- range . }}
-        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        <li><a href="{{ .RelPermalink }}">
+          {{- if and (eq $taxonomy "capabilities") (eq $page.Type "projects") -}}
+            {{ partial "format-capability.html" .LinkTitle }}
+          {{- else -}}
+            {{ .LinkTitle }}
+          {{- end -}}
+        </a></li>
       {{- end }}
     </ul>
   </div>

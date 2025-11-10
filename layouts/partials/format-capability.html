@@ -1,0 +1,4 @@
+{{/* Takes a capability name as parameter and returns formatted version */}}
+{{ $name := . }}
+{{ $prefix := "🔧 " }}  {{/* You can change this prefix to whatever you want */}}
+{{ return printf "%s%s" $prefix $name }}
