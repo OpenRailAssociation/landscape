@@ -16,7 +16,6 @@
             {{ $name = strings.TrimPrefix "\"" $name }}
             {{ $name = strings.TrimSuffix "\"" $name }}
             {{ $result = $name }}
-            {{ warnf "Found case-insensitive ID match: %s -> %s" $input $result }}
         {{ end }}
     {{ end }}
 {{ end }}
