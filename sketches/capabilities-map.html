@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Railway Capability Map</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Railway Capability Map</h1>
+  </header>
+
+  <main class="map" role="region" aria-label="Capability map">
+    <!-- Left vertical label -->
+    <aside class="left-label" aria-hidden="true">
+      <span>Market and Sale Services</span>
+    </aside>
+
+    <!-- Right vertical label -->
+    <aside class="right-label" aria-hidden="true">
+      <span>Provide General Management<br/>and Administration</span>
+    </aside>
+
+    <!-- Top service offer band -->
+    <section class="band service-offer" aria-label="Service Offer">
+      <h2 class="band-title">Inform Customer</h2>
+    </section>
+
+    <!-- Transport operations band -->
+    <section class="band transport-operation" aria-label="Transport Operation">
+      <h2 class="band-title">Perform passenger and freight transport operations</h2>
+    </section>
+
+    <!-- Transport resources grid -->
+    <section class="band transport-resources" aria-label="Transport Resources">
+      <article class="cap cap--infrastructure">
+        <h3>Provide<br/>Railway<br/>Infrastructure</h3>
+        <ul class="badges" aria-label="Related OpenRail projects">
+          <li class="badge" title="RCM OSS">2</li>
+        </ul>
+      </article>
+
+      <article class="cap cap--capacity">
+        <h3>Manage<br/>Network<br/>Capacity</h3>
+        <ul class="badges" aria-label="Related OpenRail projects">
+          <li class="badge" title="OSRD">1</li>
+          <li class="badge" title="Netzgrafik-Editor">3</li>
+          <li class="badge" title="libLRS">4</li>
+        </ul>
+      </article>
+
+      <article class="cap cap--rolling-stock">
+        <h3>Provide<br/>Rolling Stock</h3>
+        <ul class="badges" aria-label="Related OpenRail projects">
+          <li class="badge" title="DAC Migration DSS">5</li>
+        </ul>
+      </article>
+
+      <article class="cap cap--personnel">
+        <h3>Provide<br/>Personnel</h3>
+      </article>
+    </section>
+
+    <!-- IT band -->
+    <section class="band not-rail-specific it-band" aria-label="Provide Information Technologie">
+      <h2 class="band-title">Provide Information Technologie</h2>
+    </section>
+  </main>
+
+  <section class="legend" aria-labelledby="legend-title">
+    <h2 id="legend-title">Legend</h2>
+    <div class="legend-grid">
+      <div class="legend-blocks">
+        <h3>Capability Type:</h3>
+        <ul class="legend-list">
+          <li><span class="swatch service-offer"></span> Service Offer</li>
+          <li><span class="swatch transport-operation"></span> Transport Operation</li>
+          <li><span class="swatch transport-resources"></span> Transport Resources</li>
+          <li><span class="swatch not-rail-specific"></span> Not Rail Specific</li>
+        </ul>
+      </div>
+      <div class="legend-projects">
+        <h3>OpenRail Projects:</h3>
+        <ul class="projects-list">
+          <li><span class="badge">1</span> OSRD</li>
+          <li><span class="badge">2</span> RCM OSS</li>
+          <li><span class="badge">3</span> Netzgrafik-Editor</li>
+          <li><span class="badge">4</span> libLRS</li>
+          <li><span class="badge">5</span> DAC Migration DSS</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

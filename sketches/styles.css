@@ -1,0 +1,126 @@
+/* Minimal, clean CSS to replicate the structure */
+:root{
+  --border: #2b2b2b;
+  --text: #1b1b1b;
+  --muted: #6b6b6b;
+  --bg: #ffffff;
+  --band-service: #f7e7a1;           /* pale yellow */
+  --band-operation: #f3c6c3;         /* pale red */
+  --band-resources: #bcd7ea;         /* pale blue */
+  --band-it: #e5e5e5;                /* light gray */
+  --label-bg: #efefef;
+  --badge-bg: #2d5d86;
+  --badge-text: #ffffff;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; color: var(--text); background: var(--bg); font: 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Helvetica, Arial, sans-serif; }
+h1, h2, h3 { margin: 0; }
+
+.page-header { padding: 1rem 1.25rem; }
+.page-header h1 { font-size: 1.25rem; font-weight: 600; }
+
+/* Map layout */
+.map{
+  --g: 1rem;
+  position: relative;
+  margin: 0 1rem;
+  border: 2px solid var(--border);
+  border-radius: .25rem;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr 2.5rem;       /* left label, content, right label */
+  grid-template-rows: auto auto auto auto;        /* top bands + resources + it */
+  gap: 0;
+  overflow: hidden;
+}
+
+/* Vertical labels */
+.left-label, .right-label{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--label-bg);
+  border-right: 2px solid var(--border);
+  padding: .5rem .25rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.left-label{ grid-column: 1; grid-row: 1 / span 4; }
+.right-label{ grid-column: 3; grid-row: 1 / span 4; border-left: 2px solid var(--border); border-right: none; }
+
+/* Bands */
+.band{ grid-column: 2; padding: .85rem 1rem; border-bottom: 2px solid var(--border); }
+.band:last-of-type{ border-bottom: 0; }
+
+.service-offer{ background: var(--band-service); }
+.transport-operation{ background: var(--band-operation); }
+.transport-resources{ background: var(--band-resources); padding: 0; }
+.not-rail-specific{ background: var(--band-it); }
+
+.band-title{ font-size: 1rem; font-weight: 600; }
+
+/* Transport resources grid */
+.transport-resources{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px; /* thin dividers */
+  border-top: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
+}
+.cap{
+  min-height: 11rem;
+  padding: 1rem;
+  border-right: 2px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--band-resources);
+}
+.cap:last-child{ border-right: 0; }
+.cap h3{
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: .2px;
+  line-height: 1.1;
+}
+
+/* Badges (project markers) */
+.badges{ list-style: none; display: flex; gap: .35rem; padding: 0; margin: 0; }
+.badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  font-size: .875rem;
+  border-radius: .35rem;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  font-weight: 700;
+}
+
+/* Legend */
+.legend{ padding: 1rem; }
+.legend-grid{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+.legend h2{ font-size: 1rem; margin-bottom: .5rem; }
+.legend h3{ font-size: .95rem; margin: 0 0 .5rem; }
+.legend-list, .projects-list{ list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
+.swatch{ display: inline-block; width: 1.25rem; height: 1rem; margin-right: .5rem; border: 1px solid var(--border); vertical-align: middle; }
+.swatch.service-offer{ background: var(--band-service); }
+.swatch.transport-operation{ background: var(--band-operation); }
+.swatch.transport-resources{ background: var(--band-resources); }
+.swatch.not-rail-specific{ background: var(--band-it); }
+
+/* Responsive */
+@media (max-width: 900px){
+  .map{ grid-template-columns: 1.6rem 1fr 1.6rem; }
+  .transport-resources{ grid-template-columns: 1fr 1fr; }
+  .cap{ min-height: 8.5rem; }
+}
