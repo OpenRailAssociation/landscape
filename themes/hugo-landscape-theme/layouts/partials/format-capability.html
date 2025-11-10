@@ -4,7 +4,7 @@
 {{ $result := $input }}
 
 {{/* Read and parse the CSV file */}}
-{{ $csvData := os.ReadFile "openrail-capabilities.csv" }}
+{{ $csvData := os.ReadFile "references/openrail-capabilities.csv" }}
 {{ $lines := split $csvData "\n" }}
 
 {{ range after 1 $lines }}
