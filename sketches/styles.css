@@ -1,89 +1,92 @@
-/* Minimal, clean CSS to replicate the structure */
-:root{
+:root {
   --border: #2b2b2b;
   --text: #1b1b1b;
   --muted: #6b6b6b;
   --bg: #ffffff;
-  --band-service: #f7e7a1;           /* pale yellow */
-  --band-operation: #f3c6c3;         /* pale red */
-  --band-resources: #bcd7ea;         /* pale blue */
-  --band-it: #e5e5e5;                /* light gray */
+  --color-service: #f7e7a1;
+  --color-operation: #f3c6c3;
+  --color-resources: #bcd7ea;
+  --color-it: #e5e5e5;
   --label-bg: #efefef;
   --badge-bg: #2d5d86;
   --badge-text: #ffffff;
 }
 
-* { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; color: var(--text); background: var(--bg); font: 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Helvetica, Arial, sans-serif; }
 h1, h2, h3 { margin: 0; }
 
-.page-header { padding: 1rem 1.25rem; }
-.page-header h1 { font-size: 1.25rem; font-weight: 600; }
+header { padding: 1rem 1.25rem; }
 
-/* Map layout */
-.map{
+.map {
   --g: 1rem;
   position: relative;
   margin: 0 1rem;
   border: 2px solid var(--border);
   border-radius: .25rem;
   display: grid;
-  grid-template-columns: 2.5rem 1fr 2.5rem;       /* left label, content, right label */
-  grid-template-rows: auto auto auto auto;        /* top bands + resources + it */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
   gap: 0;
   overflow: hidden;
 }
 
-/* Vertical labels */
-.left-label, .right-label{
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--label-bg);
-  border-right: 2px solid var(--border);
-  padding: .5rem .25rem;
-  font-weight: 600;
-  color: var(--muted);
+.map section {
+  padding: 0.2rem;
+  border: 2px solid var(--border);
 }
-.left-label{ grid-column: 1; grid-row: 1 / span 4; }
-.right-label{ grid-column: 3; grid-row: 1 / span 4; border-left: 2px solid var(--border); border-right: none; }
 
-/* Bands */
-.band{ grid-column: 2; padding: .85rem 1rem; border-bottom: 2px solid var(--border); }
-.band:last-of-type{ border-bottom: 0; }
-
-.service-offer{ background: var(--band-service); }
-.transport-operation{ background: var(--band-operation); }
-.transport-resources{ background: var(--band-resources); padding: 0; }
-.not-rail-specific{ background: var(--band-it); }
-
-.band-title{ font-size: 1rem; font-weight: 600; }
-
-/* Transport resources grid */
-.transport-resources{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px; /* thin dividers */
-  border-top: 2px solid var(--border);
-  border-bottom: 2px solid var(--border);
+.inform-customer {
+  grid-column: 1 / 6;
+  grid-row: 1 / 1;
+  background: var(--color-service);
 }
-.cap{
-  min-height: 11rem;
-  padding: 1rem;
-  border-right: 2px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: var(--band-resources);
+
+.sales {
+  grid-column: 1 / 1;
+  grid-row: 2 / 4;
+  background: var(--color-service);
 }
-.cap:last-child{ border-right: 0; }
-.cap h3{
-  font-size: 1.15rem;
-  font-weight: 700;
-  letter-spacing: .2px;
-  line-height: 1.1;
+
+.operations {
+  grid-column: 2 / 6;
+  grid-row: 2 / 2;
+  background: var(--color-operation);
+}
+
+.infrastructure {
+  grid-column: 2 / 2;
+  grid-row: 3 / 3;
+  background: var(--color-resources);
+}
+
+.capacity {
+  grid-column: 3 / 3;
+  grid-row: 3 / 3;
+  background: var(--color-resources);
+}
+
+.rolling-stock {
+  grid-column: 4 / 4;
+  grid-row: 3 / 3;
+  background: var(--color-resources);
+}
+
+.personnel {
+  grid-column: 5 / 5;
+  grid-row: 3 / 3;
+  background: var(--color-resources);
+}
+
+.management {
+  grid-column: 6 / 6;
+  grid-row: 1 / 5;
+  background: var(--color-it);
+}
+
+.it {
+  grid-column: 1 / 6;
+  grid-row: 4 / 4;
+  background: var(--color-it);
 }
 
 /* Badges (project markers) */
@@ -113,14 +116,7 @@ h1, h2, h3 { margin: 0; }
 .legend h3{ font-size: .95rem; margin: 0 0 .5rem; }
 .legend-list, .projects-list{ list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
 .swatch{ display: inline-block; width: 1.25rem; height: 1rem; margin-right: .5rem; border: 1px solid var(--border); vertical-align: middle; }
-.swatch.service-offer{ background: var(--band-service); }
-.swatch.transport-operation{ background: var(--band-operation); }
-.swatch.transport-resources{ background: var(--band-resources); }
-.swatch.not-rail-specific{ background: var(--band-it); }
-
-/* Responsive */
-@media (max-width: 900px){
-  .map{ grid-template-columns: 1.6rem 1fr 1.6rem; }
-  .transport-resources{ grid-template-columns: 1fr 1fr; }
-  .cap{ min-height: 8.5rem; }
-}
+.swatch.service-offer{ background: var(--color-service); }
+.swatch.transport-operation{ background: var(--color-operation); }
+.swatch.transport-resources{ background: var(--color-resources); }
+.swatch.not-rail-specific{ background: var(--color-it); }
