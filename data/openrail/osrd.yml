@@ -24,6 +24,6 @@ localisation:
 businessCapabilities:
   profile: railway
   capabilities:
-    - Plan Long Term
-    - Plan Short Term
+    - capacity/long-term
+    - capacity/short-term
 

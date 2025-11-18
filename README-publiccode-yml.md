@@ -14,8 +14,9 @@ The businessCapabilities key works as shown in the example below:
 
     businessCapabilities:
         profile: railway
-        cpabilities:
+        capabilities:
           - sales/passenger
+          - sales/pricing
 
 The `profile` field is always set to `railway`. It defines which vocabulary can be used in the list of `capabilities`. This would allow to also add specific sets of capabilities for other industry sectors.
 
@@ -69,6 +70,8 @@ management/supply-chain
 management/real-estate
 ````
 
-A project can have one or more of these capabilities assigned.
+A project can have one or more of these capabilities assigned. In the publiccode.yml files, capabilities are referenced using their IDs (e.g., 'inform-customer/trip-planning' or 'operations/train-driving'). The system automatically converts these IDs to their display names when showing the information on the website.
 
 Each of the capability IDs consists of a high-level category and a concrete capability. The higher-level categories are used to group these capabilities. These will be used for display of overviews of projects and as additional information to understand the scope of the capabilities.
+
+When adding capabilities to a publiccode.yml file, always use the full ID path (e.g., 'operations/train-driving' rather than just 'train-driving').

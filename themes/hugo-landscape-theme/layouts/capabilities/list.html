@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  <div class="capabilities-list">
+    {{ range .Pages }}
+      <div class="capability-item">
+        <h2><a href="{{ .RelPermalink }}">{{ partial "format-capability" .Title }}</a></h2>
+        {{ if .Description }}
+          <p>{{ .Description }}</p>
+        {{ else }}
+          {{ .Summary }}
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

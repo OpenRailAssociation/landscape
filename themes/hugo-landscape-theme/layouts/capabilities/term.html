@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <h1>{{ partial "format-capability" .Title }}</h1>
+  {{ .Content }}
+
+  <div class="capabilities-list">
+    {{ range .Pages }}
+      <div class="capability-item">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ if .Description }}
+          <p>{{ .Description }}</p>
+        {{ else }}
+          {{ .Summary }}
+        {{ end }}
+
+        {{/* List projects using this capability */}}
+        {{ $capability := .Title }}
+        {{ $projects := where .Site.RegularPages "Params.capabilities" "intersect" (slice $capability) }}
+        {{ with $projects }}
+          <h3>Projects:</h3>
+          <ul>
+            {{ range . }}
+              <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

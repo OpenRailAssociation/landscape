@@ -12,4 +12,4 @@ description:
 businessCapabilities:
   profile: railway
   capabilities:
-    - Maintain Rolling Stock
+    - rolling-stock/maintenance

@@ -1,0 +1,24 @@
+{{/* Takes a capability ID as parameter and returns formatted name */}}
+{{ $input := . }}
+{{ $prefix := "🔧 " }}
+{{ $result := $input }}
+
+{{/* Read and parse the CSV file */}}
+{{ $csvData := os.ReadFile "references/openrail-capabilities.csv" }}
+{{ $lines := split $csvData "\n" }}
+
+{{ range after 1 $lines }}
+    {{ $fields := split . "," }}
+    {{ if gt (len $fields) 2 }}
+        {{ $id := index $fields 2 }}
+        {{ if eq (lower $id) (lower $input) }}
+            {{ $name := index $fields 3 }}
+            {{ $name = strings.TrimPrefix "\"" $name }}
+            {{ $name = strings.TrimSuffix "\"" $name }}
+            {{ $result = $name }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ $result = printf "%s%s" $prefix $result }}
+{{ return $result }}

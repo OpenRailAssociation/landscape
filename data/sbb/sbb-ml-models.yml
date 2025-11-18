@@ -27,5 +27,5 @@ localisation:
 businessCapabilities:
   profile: railway
   capabilities:
-    - Provide Passenger Facilities
-    - Maintain Rolling Stock
+    - infrastructure/passenger
+    - rolling-stock/maintenance
