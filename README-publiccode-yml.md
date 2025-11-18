@@ -15,56 +15,60 @@ The businessCapabilities key works as shown in the example below:
     businessCapabilities:
         profile: railway
         cpabilities:
-          - sales
+          - sales/passenger
 
 The `profile` field is always set to `railway`. It defines which vocabulary can be used in the list of `capabilities`. This would allow to also add specific sets of capabilities for other industry sectors.
 
-For the `railway` sector the following list of values is allowed:
+For the `railway` sector the following list of values is allowed. See [references/openrail-capabilities.csv](references/openrail-capabilities.csv) for the definition of the IDs with explanations:
 
 ````
-Plan Passenger Trip
-Inform passenger in real time
-Inform Freight Customer
-Short-term Staff Disptaching
-Short-term Rolling Stock Disptaching
-Drive train
-Inspect ticket
-Care For Passengers
-Care For Goods
-Manage Emergency
-Monitor and control Train Path
-Monitor Rolling Stock
-Sell Freight Transport
-Sell Passenger Transport
-Forecast Traffic
-Define Price Policy
-Provide Rail Network
-Provide Passenger Facilities
-Provide Freight Facilities
-Provide Energy Supply
-Provide Data Network
-Plan Long Term
-Plan Short Term
-Sell Network Capacity
-Manage Yard
-Roster Rolling Stock
-Manage Fleet planing
-Maintain Rolling stock
-Procure Rolling Stock
-Manufacture Rolling Stock
-Roster Staff
-Plan Personal capacities
-Recrute and Train Employees
-Provide Application Services
-Provide Data Center Services
-Manage IT-Security
-Manage Corporate
-Manage Human Ressources
-Manage Finance and Controlling
-Manage Compliance and Legal Affairs
-Manage Supply Chain Management
+inform-customer/passenger-timetable
+inform-customer/trip-planning
+inform-customer/realtime-passenger
+inform-customer/realtime-freight
+inform-customer/route-guidance
+operations/staff-dispatch
+operations/rolling-stock-dispatch
+operations/train-driving
+operations/ticket-inspection
+operations/passenger-care
+operations/goods-care
+operations/emergency
+operations/path-control
+operations/rolling-stock-monitoring
+sales/freight
+sales/passenger
+sales/traffic-forecasting
+sales/pricing
+infrastructure/rail-network
+infrastructure/passenger
+infrastructure/freight
+infrastructure/energy
+infrastructure/data-network
+capacity/long-term
+capacity/short-term
+capacity/sales
+capacity/yard
+rolling-stock
+rolling-stock/roster
+rolling-stock/fleet
+rolling-stock/maintenance
+rolling-stock/procurement
+rolling-stock/manufacture
+personnel/roster
+personnel/planning
+personnel/training
+it/applications
+it/datacenter
+it/security
+management/corporate
+management/hr
+management/finance
+management/legal
+management/supply-chain
+management/real-estate
 ````
 
 A project can have one or more of these capabilities assigned.
 
-We will add higher-level categories to group these capabilities. These will be used for display of overviews of projects and as additional information to understand the scope of the capabilities. They will not be used as values in specific publiccode.yml files.
+Each of the capability IDs consists of a high-level category and a concrete capability. The higher-level categories are used to group these capabilities. These will be used for display of overviews of projects and as additional information to understand the scope of the capabilities.
