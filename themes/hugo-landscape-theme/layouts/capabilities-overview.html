@@ -1,20 +1,74 @@
 {{ define "main" }}
-<!-- USING CUSTOM CAPABILITIES-OVERVIEW LAYOUT -->
-<link rel="stylesheet" href="/sketches/styles.css">
+{{- with resources.Get "css/capabilities-overview.css" }}
+<link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- end }}
 <main class="capabilities-overview">
   <h1>{{ .Title }}</h1>
   <div class="intro">{{ .Content }}</div>
+
+  <div class="map">
+    <a href="#sales" class="sales">
+      <h2>Market and Sale Services</h2>
+    </a>
+
+    <a href="#management" class="management">
+      <h2>Provide General Management and Administration</h2>
+    </a>
+
+    <a href="#inform-customer" class="inform-customer">
+      <h2>Inform Customer</h2>
+    </a>
+
+    <a href="#operations" class="operations">
+      <h2>Perform passenger and freight transport operations</h2>
+    </a>
+
+    <a href="#infrastructure" class="infrastructure">
+      <h2>Provide Railway Infrastructure</h2>
+    </a>
+
+    <a href="#capacity" class="capacity">
+      <h2>Manage Network Capacity</h2>
+    </a>
+
+    <a href="#rolling-stock" class="rolling-stock">
+      <h2>Provide Rolling Stock</h2>
+    </a>
+
+    <a href="#personnel" class="personnel">
+      <h2>Provide Personnel</h2>
+    </a>
+
+    <a href="#it" class="it">
+      <h2>Provide Information Technology</h2>
+    </a>
+  </div>
+
+  <section class="legend">
+    <div class="legend-grid">
+      <div class="legend-blocks">
+        <h2>Capability Type:</h2>
+        <ul class="legend-list">
+          <li><span class="swatch service-offer"></span> Service Offer</li>
+          <li><span class="swatch transport-operation"></span> Transport Operation</li>
+          <li><span class="swatch transport-resources"></span> Transport Resources</li>
+          <li><span class="swatch not-rail-specific"></span> Not Rail Specific</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <div class="capabilities-list">
     {{ $capabilities := slice
+      (dict "id" "sales" "name" "Market and Sale Services")
+      (dict "id" "management" "name" "Provide General Management and Administration")
       (dict "id" "inform-customer" "name" "Inform Customer")
-      (dict "id" "operations" "name" "Operations")
-      (dict "id" "sales" "name" "Sales")
-      (dict "id" "infrastructure" "name" "Infrastructure")
-      (dict "id" "capacity" "name" "Capacity")
-      (dict "id" "rolling-stock" "name" "Rolling Stock")
-      (dict "id" "personnel" "name" "Personnel")
-      (dict "id" "it" "name" "Information Technology")
-      (dict "id" "management" "name" "Management")
+      (dict "id" "operations" "name" "Perform passenger and freight transport operations")
+      (dict "id" "infrastructure" "name" "Provide Railway Infrastructure")
+      (dict "id" "capacity" "name" "Manage Network Capacity")
+      (dict "id" "rolling-stock" "name" "Provide Rolling Stock")
+      (dict "id" "personnel" "name" "Provide Personnel")
+      (dict "id" "it" "name" "Provide Information Technology")
     }}
     {{ range $capabilities }}
       {{ $capabilityPrefix := printf "%s/" .id }}

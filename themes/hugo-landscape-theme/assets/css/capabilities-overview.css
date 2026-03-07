@@ -1,0 +1,156 @@
+:root {
+  --border: #2b2b2b;
+  --text: #1b1b1b;
+  --bg: #ffffff;
+  --color-service: #f7e7a1;
+  --color-operation: #f3c6c3;
+  --color-resources: #bcd7ea;
+  --color-it: #e5e5e5;
+}
+
+.map {
+  position: relative;
+  margin: 2rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: .25rem;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 0;
+  overflow: hidden;
+}
+
+.map a {
+  padding: 0.2rem;
+  border: 2px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  display: block;
+}
+
+.map a:hover, .map a:focus {
+  opacity: 0.8;
+  outline: 2px solid var(--text);
+  outline-offset: -4px;
+}
+
+.inform-customer {
+  grid-column: 1 / 6;
+  grid-row: 1 / 1;
+  background: var(--color-service);
+}
+
+.sales {
+  grid-column: 1 / 1;
+  grid-row: 2 / 4;
+  background: var(--color-service);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.operations {
+  grid-column: 2 / 6;
+  grid-row: 2 / 2;
+  background: var(--color-operation);
+}
+
+.infrastructure {
+  grid-column: 2 / 2;
+  grid-row: 3 / 3;
+  background: var(--color-resources);
+}
+
+.capacity {
+  grid-column: 3 / 3;
+  grid-row: 3 / 3;
+  background: var(--color-resources);
+}
+
+.rolling-stock {
+  grid-column: 4 / 4;
+  grid-row: 3 / 3;
+  background: var(--color-resources);
+}
+
+.personnel {
+  grid-column: 5 / 5;
+  grid-row: 3 / 3;
+  background: var(--color-resources);
+}
+
+.management {
+  grid-column: 6 / 6;
+  grid-row: 1 / 5;
+  background: var(--color-it);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.it {
+  grid-column: 1 / 6;
+  grid-row: 4 / 4;
+  background: var(--color-it);
+}
+
+.legend {
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.legend-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+.legend h2 {
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+
+.legend h3 {
+  font-size: .95rem;
+  margin: 0 0 .5rem;
+}
+
+.legend-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .35rem;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1.25rem;
+  height: 1rem;
+  margin-right: .5rem;
+  border: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.swatch.service-offer {
+  background: var(--color-service);
+}
+
+.swatch.transport-operation {
+  background: var(--color-operation);
+}
+
+.swatch.transport-resources {
+  background: var(--color-resources);
+}
+
+.swatch.not-rail-specific {
+  background: var(--color-it);
+}
+
+.capabilities-list {
+  margin-top: 2rem;
+}
+
+.capability-section {
+  margin-bottom: 2rem;
+}
