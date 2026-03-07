@@ -1,0 +1,61 @@
+{{ define "main" }}
+<!-- USING CUSTOM CAPABILITIES-OVERVIEW LAYOUT -->
+<link rel="stylesheet" href="/sketches/styles.css">
+<main class="capabilities-overview">
+  <h1>{{ .Title }}</h1>
+  <div class="intro">{{ .Content }}</div>
+  <div class="capabilities-list">
+    {{ $capabilities := slice
+      (dict "id" "inform-customer" "name" "Inform Customer")
+      (dict "id" "operations" "name" "Operations")
+      (dict "id" "sales" "name" "Sales")
+      (dict "id" "infrastructure" "name" "Infrastructure")
+      (dict "id" "capacity" "name" "Capacity")
+      (dict "id" "rolling-stock" "name" "Rolling Stock")
+      (dict "id" "personnel" "name" "Personnel")
+      (dict "id" "it" "name" "Information Technology")
+      (dict "id" "management" "name" "Management")
+    }}
+    {{ range $capabilities }}
+      {{ $capabilityPrefix := printf "%s/" .id }}
+      <section class="capability-section">
+        <h2 id="{{ .id }}">{{ .name }}</h2>
+        <div class="projects-list">
+          {{ $matchingProjects := slice }}
+          {{ range $.Site.RegularPages }}
+            {{ $page := . }}
+            {{ if .Params.capabilities }}
+              {{ range .Params.capabilities }}
+                {{ if hasPrefix . $capabilityPrefix }}
+                  {{ $matchingProjects = $matchingProjects | append $page }}
+                  {{ break }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          {{ if $matchingProjects }}
+            <ul>
+              {{ range sort $matchingProjects "Title" }}
+                <li>
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  {{ with .Params.capabilities }}
+                    {{ range . }}
+                      {{ if hasPrefix . $capabilityPrefix }}
+                        ({{ . }})
+                      {{ end }}
+                    {{ end }}
+                  {{ end }}
+                  <br>
+                  {{ .Summary }}
+                </li>
+              {{ end }}
+            </ul>
+          {{ else }}
+            <p><em>No projects yet</em></p>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  </div>
+</main>
+{{ end }}

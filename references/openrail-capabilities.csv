@@ -1,6 +1,6 @@
 ﻿UID,Level,ID,Name,Description,"Actor (RU = Railway Undertaker, IM = Infrastructure Manager, TA = Ticketing Authority)"
 1.00,1,inform-customer,Inform Customer,"Provide information about transports for customers",RU/IM/TA
-1.05,2,inform-customer/timetable,Publish Passenger Timetable and Route Information,"Provide trip planning basic information like timetables and maps for overview information and non-digital trip planning.",
+1.05,2,inform-customer/passenger-timetable,Publish Passenger Timetable and Route Information,"Provide trip planning basic information like timetables and maps for overview information and non-digital trip planning.",
 1.10,2,inform-customer/trip-planning,Plan Passenger Trip,"Provide digital trip planning tools for mobile and fixed devices.",RU/TA
 1.20,2,inform-customer/realtime-passenger,Inform passenger in real time,"Provide real-time passenger information in vehicles, in stations and on customer devices.",RU/IM/TA
 1.30,2,inform-customer/realtime-freight,Inform Freight Customer in real time,"Provide real-time information for freight customers about the status of the transport and estimated time of arrival.",RU/IM
@@ -14,11 +14,11 @@
 2.60,2,operations/goods-care,Care For Goods,"Provide services for the transport of goods during the rail transport as well as before and after the transport. This can include services for safe transportation, loading and unloading as well as custom services.",RU
 2.70,2,operations/emergency,Manage Emergency,"Coordinate help in an emergency situation. Alarm or dispatch emergency teams and equipment. This includes the operation of emergency trains, firefighters and ambulances.",IM
 2.80,2,operations/path-control,Monitor and control Train Path ,"Monitoring via Sensors, Axles Counter, Signaling, Hotbox, Gage control. Control via Interlocking system.",IM
-2.90,2,operations/stock-monitoring,Monitor Rolling Stock,"Monitor rolling stock during operation with sensors on the train and with wayside installations.",RU
+2.90,2,operations/rolling-stock-monitoring,Monitor Rolling Stock,"Monitor rolling stock during operation with sensors on the train and with wayside installations.",RU
 3.00,1,sales,Market and Sale Services,"Market and sell transport services for passengers and goods according to demand.",
 3.10,2,sales/freight,Sell Freight Transport,"Sell transport services to freight customers.",RU
 3.30,2,sales/passenger,Sell Passenger Transport,"Sell tickets and other additional services to passengers.",RU
-3.40,2,sales/forecasting,Forecast Traffic,"Forecast long-term demand for rail traffic and modal split.",RU/IM/TA
+3.40,2,sales/traffic-forecasting,Forecast Traffic,"Forecast long-term demand for rail traffic and modal split.",RU/IM/TA
 3.50,2,sales/pricing,Define Price and Product Policy,"Define pricing systems and policies for rail services.",RU/IM
 4.00,1,infrastructure,Provide  Railway Infrastructure,"Design, build, operate and maintain infrastructure needed for rail transport.",IM
 4.10,2,infrastructure/rail-network,Provide Rail Network,"Design, build, and maintain rail network including track, engineering structures, tunnels, bridges, catenary, signaling, and control technology",IM/Supplier
