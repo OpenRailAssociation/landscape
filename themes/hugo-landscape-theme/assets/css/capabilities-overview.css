@@ -10,28 +10,44 @@
 
 .map {
   position: relative;
-  margin: 2rem 1rem;
-  border: 2px solid var(--border);
-  border-radius: .25rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border: 3px solid var(--border);
+  border-radius: 8px;
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 0.5fr;
   grid-template-rows: auto auto auto auto;
   gap: 0;
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .map a {
-  padding: 0.2rem;
+  padding: 1rem;
   border: 2px solid var(--border);
   text-decoration: none;
   color: var(--text);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.map a h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
 }
 
 .map a:hover, .map a:focus {
-  opacity: 0.8;
-  outline: 2px solid var(--text);
-  outline-offset: -4px;
+  filter: saturate(1.8) brightness(1.1);
+  z-index: 10;
+}
+
+.inform-customer:hover, .inform-customer:focus,
+.sales:hover, .sales:focus {
+  filter: saturate(1.5) brightness(0.95);
 }
 
 .inform-customer {
@@ -93,8 +109,12 @@
 }
 
 .legend {
-  padding: 1rem;
-  margin: 2rem 0;
+  padding: 1.5rem;
+  margin: 2rem auto 2rem;
+  max-width: 1200px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
 }
 
 .legend-grid {
@@ -105,13 +125,9 @@
 }
 
 .legend h2 {
-  font-size: 1rem;
-  margin-bottom: .5rem;
-}
-
-.legend h3 {
-  font-size: .95rem;
-  margin: 0 0 .5rem;
+  font-size: 1.1rem;
+  margin: 0 0 .75rem 0;
+  font-weight: 600;
 }
 
 .legend-list {
@@ -119,15 +135,21 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: .35rem;
+  gap: .5rem;
+}
+
+.legend-list li {
+  display: flex;
+  align-items: center;
 }
 
 .swatch {
   display: inline-block;
-  width: 1.25rem;
-  height: 1rem;
-  margin-right: .5rem;
-  border: 1px solid var(--border);
+  width: 2rem;
+  height: 1.25rem;
+  margin-right: .75rem;
+  border: 2px solid var(--border);
+  border-radius: 3px;
   vertical-align: middle;
 }
 
