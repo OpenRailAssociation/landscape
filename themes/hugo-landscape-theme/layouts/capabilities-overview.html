@@ -2,7 +2,7 @@
 {{- with resources.Get "css/capabilities-overview.css" }}
 <link rel="stylesheet" href="{{ .RelPermalink }}">
 {{- end }}
-<main class="capabilities-overview">
+<div class="capabilities-overview">
   <h1>{{ .Title }}</h1>
   <div class="intro">{{ .Content }}</div>
 
@@ -111,5 +111,5 @@
       </section>
     {{ end }}
   </div>
-</main>
+</div>
 {{ end }}

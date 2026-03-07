@@ -10,7 +10,7 @@
 
 .map {
   position: relative;
-  margin: 2rem auto;
+  margin: 2rem 0;
   max-width: 1200px;
   border: 3px solid var(--border);
   border-radius: 8px;
@@ -110,7 +110,7 @@
 
 .legend {
   padding: 1.5rem;
-  margin: 2rem auto 2rem;
+  margin: 2rem 0;
   max-width: 1200px;
   background: #f9f9f9;
   border-radius: 8px;
