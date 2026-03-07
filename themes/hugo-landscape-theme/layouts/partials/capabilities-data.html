@@ -1,0 +1,101 @@
+{{/* Capability definitions from references/openrail-capabilities.csv */}}
+{{ return (dict
+  "inform-customer" (dict
+    "name" "Inform Customer"
+    "desc" "Provide information about transports for customers"
+    "items" (slice
+      (dict "id" "inform-customer/passenger-timetable" "name" "Publish Passenger Timetable and Route Information" "desc" "Provide trip planning basic information like timetables and maps for overview information and non-digital trip planning.")
+      (dict "id" "inform-customer/trip-planning" "name" "Plan Passenger Trip" "desc" "Provide digital trip planning tools for mobile and fixed devices.")
+      (dict "id" "inform-customer/realtime-passenger" "name" "Inform passenger in real time" "desc" "Provide real-time passenger information in vehicles, in stations and on customer devices.")
+      (dict "id" "inform-customer/realtime-freight" "name" "Inform Freight Customer in real time" "desc" "Provide real-time information for freight customers about the status of the transport and estimated time of arrival.")
+      (dict "id" "inform-customer/route-guidance" "name" "Guide passenger to alternative routes" "desc" "Recommend and guide travelers to alternative routes during disruptions")
+    )
+  )
+  "operations" (dict
+    "name" "Perform passenger and freight transport operations"
+    "desc" "Provide services for passengers and goods during, before and after transport. Monitor train operations, vehicles, and infrastructure in operation. Manage disruptions and dispatch in short-term track capacity, rolling stock and staff according to the situation."
+    "items" (slice
+      (dict "id" "operations/staff-dispatch" "name" "Short-term Staff Dispatching" "desc" "Adjustments of the roster due to unplanned short-term staff shortages because an employee cannot start their shift or cannot perform a scheduled task during their shift.")
+      (dict "id" "operations/rolling-stock-dispatch" "name" "Short-term Rolling Stock Dispatching" "desc" "Adjustments of the roster due to unplanned short-term loss of the availability of a vehicle like a train, engine or carriage.")
+      (dict "id" "operations/train-driving" "name" "Drive train" "desc" "Train driving (e.g. including Driver Advisory System)")
+      (dict "id" "operations/ticket-inspection" "name" "Inspect ticket" "desc" "Check tickets on the train or before and after boarding or entering the station.")
+      (dict "id" "operations/passenger-care" "name" "Care For Passengers" "desc" "Provide services for customers during the journey on the train as well as before and after boarding the train.")
+      (dict "id" "operations/goods-care" "name" "Care For Goods" "desc" "Provide services for the transport of goods during the rail transport as well as before and after the transport. This can include services for safe transportation, loading and unloading as well as custom services.")
+      (dict "id" "operations/emergency" "name" "Manage Emergency" "desc" "Coordinate help in an emergency situation. Alarm or dispatch emergency teams and equipment. This includes the operation of emergency trains, firefighters and ambulances.")
+      (dict "id" "operations/path-control" "name" "Monitor and control Train Path" "desc" "Monitoring via Sensors, Axles Counter, Signaling, Hotbox, Gage control. Control via Interlocking system.")
+      (dict "id" "operations/rolling-stock-monitoring" "name" "Monitor Rolling Stock" "desc" "Monitor rolling stock during operation with sensors on the train and with wayside installations.")
+    )
+  )
+  "sales" (dict
+    "name" "Market and Sale Services"
+    "desc" "Market and sell transport services for passengers and goods according to demand."
+    "items" (slice
+      (dict "id" "sales/freight" "name" "Sell Freight Transport" "desc" "Sell transport services to freight customers.")
+      (dict "id" "sales/passenger" "name" "Sell Passenger Transport" "desc" "Sell tickets and other additional services to passengers.")
+      (dict "id" "sales/traffic-forecasting" "name" "Forecast Traffic" "desc" "Forecast long-term demand for rail traffic and modal split.")
+      (dict "id" "sales/pricing" "name" "Define Price and Product Policy" "desc" "Define pricing systems and policies for rail services.")
+    )
+  )
+  "infrastructure" (dict
+    "name" "Provide  Railway Infrastructure"
+    "desc" "Design, build, operate and maintain infrastructure needed for rail transport."
+    "items" (slice
+      (dict "id" "infrastructure/rail-network" "name" "Provide Rail Network" "desc" "Design, build, and maintain rail network including track, engineering structures, tunnels, bridges, catenary, signaling, and control technology")
+      (dict "id" "infrastructure/passenger" "name" "Provide Passenger Facilities" "desc" "Design, build, maintain, and operate passenger facilities")
+      (dict "id" "infrastructure/freight" "name" "Provide Freight Facilities" "desc" "Design, build, maintain, and operate freight facilities including marshalling yards.")
+      (dict "id" "infrastructure/energy" "name" "Provide Energy Supply" "desc" "Design, build, maintain, and operate energy supply and distribution facilities including buying energy from suppliers.")
+      (dict "id" "infrastructure/data-network" "name" "Provide Data Network" "desc" "Provide connectivity for interlocking, communication, and general data transfer.")
+    )
+  )
+  "capacity" (dict
+    "name" "Manage Network Capacity"
+    "desc" "Design, Operate long term planning to short term planning"
+    "items" (slice
+      (dict "id" "capacity/long-term" "name" "Plan Long Term" "desc" "Long term timetable and studies. Including timetable planning for long-planned construction and track works")
+      (dict "id" "capacity/short-term" "name" "Plan Short Term" "desc" "Short term path request, Track Occupancy Diagram")
+      (dict "id" "capacity/sales" "name" "Sell Network Capacity" "desc" "Selling capacity to railway undertakers (long and short term)")
+      (dict "id" "capacity/yard" "name" "Manage Yard" "desc" "Manage marshalling and shunting")
+    )
+  )
+  "rolling-stock" (dict
+    "name" "Provide Rolling Stock"
+    "desc" "Design, build, maintenance and management of rolling stock"
+    "items" (slice
+      (dict "id" "rolling-stock/roster" "name" "Roster Rolling Stock" "desc" "Plan and assign work schedules for rolling stock. This involves the creation of a roster which determines when and where vehicles are required and assigned to tasks. This includes the allocation of rolling stock to specific routes and services.")
+      (dict "id" "rolling-stock/fleet" "name" "Manage Fleet Planning" "desc" "Plan long-term capacity of rolling stock to meet long-term demand.")
+      (dict "id" "rolling-stock/maintenance" "name" "Maintain Rolling stock" "desc" "Predictive maintenance, long term and daily planning maintenance")
+      (dict "id" "rolling-stock/procurement" "name" "Procure Rolling Stock" "desc" "Procurement of rolling stock by the railway company from the manufacturer")
+      (dict "id" "rolling-stock/manufacture" "name" "Manufacture Rolling Stock" "desc" "Design and manufacture rolling stock")
+    )
+  )
+  "personnel" (dict
+    "name" "Provide Personnel"
+    "desc" "Plan and prepare personnel for railway-specific tasks. Plan and provide the necessary personnel capacities."
+    "items" (slice
+      (dict "id" "personnel/roster" "name" "Roster Staff" "desc" "Plan and assign work schedules for personnel. Create a roster which determines when and where an employee is assigned to a task. This includes the allocation of staff to specific routes and services taking into account the necessary knowledge and legal requirements.")
+      (dict "id" "personnel/planning" "name" "Plan Personal Capacities" "desc" "Plan long-term demand and supply of personnel capacities in the different personnel categories. Define demand for recruiting and training.")
+      (dict "id" "personnel/training" "name" "Recruit and Train Employees" "desc" "Recruit and train employees in all categories like locomotive drivers, train attendants, signal box personnel, technical maintenance staff for rolling stock and signal technology, as well as personnel for the construction and maintenance of infrastructure. Create and maintain the necessary learning content and tools, including simulators.")
+    )
+  )
+  "it" (dict
+    "name" "Provide Information Technology"
+    "desc" ""
+    "items" (slice
+      (dict "id" "it/applications" "name" "Provide Application Services" "desc" "Design, build, buy or share software and operate applications. Buy application services.")
+      (dict "id" "it/datacenter" "name" "Provide Data Center Services" "desc" "Provide or buy data center services.")
+      (dict "id" "it/security" "name" "Manage IT Security" "desc" "Manage IT security")
+    )
+  )
+  "management" (dict
+    "name" "Provide General Management and Administration"
+    "desc" ""
+    "items" (slice
+      (dict "id" "management/corporate" "name" "Manage Corporate" "desc" "General management of a company")
+      (dict "id" "management/hr" "name" "Manage Human Resources" "desc" "Human Resources management of a company")
+      (dict "id" "management/finance" "name" "Manage Finance and Controlling" "desc" "Financial management of a company")
+      (dict "id" "management/legal" "name" "Manage Compliance and Legal Affairs" "desc" "Ensure that the company complies with applicable laws and regulations while conducting its legal affairs in its best interest")
+      (dict "id" "management/supply-chain" "name" "Manage Supply Chain Management" "desc" "General supply chain management processes.")
+      (dict "id" "management/real-estate" "name" "Manage Real Estate" "desc" "Manage properties and buildings for corporate needs.")
+    )
+  )
+) }}

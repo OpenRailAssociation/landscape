@@ -1,0 +1,37 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+
+  {{ $capabilities := partial "capabilities-data.html" }}
+
+  {{ range $catId, $category := $capabilities }}
+    <section class="capability-category">
+      <h2>{{ $category.name }}</h2>
+      {{ with $category.desc }}<p><em>{{ . }}</em></p>{{ end }}
+      <ul class="capability-list">
+        {{ range $category.items }}
+          <li>
+            <strong>{{ .name }}</strong>
+            {{ $capabilityId := .id }}
+            {{ $matchingProjects := slice }}
+            {{ range $.Site.RegularPages }}
+              {{ $page := . }}
+              {{ if .Params.capabilities }}
+                {{ range .Params.capabilities }}
+                  {{ if or (eq . $capabilityId) (hasPrefix . (printf "%s/" $capabilityId)) }}
+                    {{ $matchingProjects = $matchingProjects | append $page }}
+                    {{ break }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            {{ if gt (len $matchingProjects) 0 }}
+              <small>(<a href="../capabilities/{{ .id }}">{{ len $matchingProjects }} {{ if eq (len $matchingProjects) 1 }}project{{ else }}projects{{ end }}</a>)</small>
+            {{ end }}
+            <p>{{ .desc }}</p>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  {{ end }}
+{{ end }}

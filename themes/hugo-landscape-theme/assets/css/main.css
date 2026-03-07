@@ -112,3 +112,35 @@ code {
   border-radius: 3px;
   font-size: 0.9em;
 }
+
+.capability-category {
+  margin-bottom: 3rem;
+}
+
+.capability-category h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.capability-list {
+  list-style: none;
+  padding: 0;
+}
+
+.capability-list li {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #3498db;
+}
+
+.capability-list li p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.capability-list li small {
+  color: #7f8c8d;
+}

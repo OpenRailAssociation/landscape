@@ -8,4 +8,5 @@ This landscape collects open source projects in the rail and transport sector.
 
 Browse projects by:
 - [All Projects](projects) - Complete alphabetical listing
+- [Capabilities](capabilities) - Browse by capability category
 - [Capabilities Overview](capabilities-overview) - Visual map and capability-based grouping

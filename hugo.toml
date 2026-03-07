@@ -12,11 +12,16 @@ theme = 'hugo-landscape-theme'
     weight = 10
 
 [[menus.main]]
-    name = 'Projects'
+    name = 'All Projects'
     pageRef = '/projects'
     weight = 20
 
 [[menus.main]]
-    name = 'Capabilities Overview'
+    name = 'Projects by Capability'
     pageRef = '/capabilities-overview'
     weight = 30
+
+[[menus.main]]
+    name = 'Capabilities'
+    pageRef = '/capabilities'
+    weight = 40
