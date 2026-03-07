@@ -11,6 +11,21 @@ header {
   margin-bottom: 1rem;
 }
 
+header nav ul,
+nav ul {
+  list-style: none !important;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+header nav li,
+nav li {
+  display: inline;
+}
+
 footer {
   border-top: 1px solid #222;
   margin-top: 1rem;
