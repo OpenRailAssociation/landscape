@@ -123,24 +123,59 @@ code {
   padding-bottom: 0.5rem;
 }
 
-.capability-list {
-  list-style: none;
-  padding: 0;
+.capability-items {
+  margin-top: 1rem;
 }
 
-.capability-list li {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background: #f8f9fa;
-  border-radius: 6px;
-  border-left: 4px solid #3498db;
+.capability-item {
+  margin: 2rem 0;
 }
 
-.capability-list li p {
+.capability-item h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.capability-item p {
   margin: 0.5rem 0;
   color: #555;
 }
 
-.capability-list li small {
+.capability-item small {
   color: #7f8c8d;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.project-card {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.project-card h2,
+.project-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.project-card h2 a,
+.project-card h3 a {
+  color: #3498db;
+}
+
+.project-card p {
+  margin-bottom: 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }

@@ -1,3 +1,58 @@
 {{ define "main" }}
+{{- with resources.Get "css/capabilities-overview.css" }}
+<link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- end }}
   {{ .Content }}
+
+  <div class="map">
+    <a href="capabilities-overview#sales" class="sales">
+      <h2>Market and Sale Services</h2>
+    </a>
+
+    <a href="capabilities-overview#management" class="management">
+      <h2>Provide General Management and Administration</h2>
+    </a>
+
+    <a href="capabilities-overview#inform-customer" class="inform-customer">
+      <h2>Inform Customer</h2>
+    </a>
+
+    <a href="capabilities-overview#operations" class="operations">
+      <h2>Perform passenger and freight transport operations</h2>
+    </a>
+
+    <a href="capabilities-overview#infrastructure" class="infrastructure">
+      <h2>Provide Railway Infrastructure</h2>
+    </a>
+
+    <a href="capabilities-overview#capacity" class="capacity">
+      <h2>Manage Network Capacity</h2>
+    </a>
+
+    <a href="capabilities-overview#rolling-stock" class="rolling-stock">
+      <h2>Provide Rolling Stock</h2>
+    </a>
+
+    <a href="capabilities-overview#personnel" class="personnel">
+      <h2>Provide Personnel</h2>
+    </a>
+
+    <a href="capabilities-overview#it" class="it">
+      <h2>Provide Information Technology</h2>
+    </a>
+  </div>
+
+  <section class="legend">
+    <div class="legend-grid">
+      <div class="legend-blocks">
+        <h2>Capability Type:</h2>
+        <ul class="legend-list">
+          <li><span class="swatch service-offer"></span> Service Offer</li>
+          <li><span class="swatch transport-operation"></span> Transport Operation</li>
+          <li><span class="swatch transport-resources"></span> Transport Resources</li>
+          <li><span class="swatch not-rail-specific"></span> Not Rail Specific</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 {{ end }}

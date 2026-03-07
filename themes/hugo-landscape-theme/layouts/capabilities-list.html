@@ -8,10 +8,10 @@
     <section class="capability-category">
       <h2>{{ $category.name }}</h2>
       {{ with $category.desc }}<p><em>{{ . }}</em></p>{{ end }}
-      <ul class="capability-list">
+      <div class="capability-items">
         {{ range $category.items }}
-          <li>
-            <strong>{{ .name }}</strong>
+          <div class="capability-item">
+            <h3>{{ .name }}</h3>
             {{ $capabilityId := .id }}
             {{ $matchingProjects := slice }}
             {{ range $.Site.RegularPages }}
@@ -29,9 +29,9 @@
               <small>(<a href="../capabilities/{{ .id }}">{{ len $matchingProjects }} {{ if eq (len $matchingProjects) 1 }}project{{ else }}projects{{ end }}</a>)</small>
             {{ end }}
             <p>{{ .desc }}</p>
-          </li>
+          </div>
         {{ end }}
-      </ul>
+      </div>
     </section>
   {{ end }}
 {{ end }}

@@ -1,5 +1,5 @@
 +++
-title = 'Capabilities'
+title = 'All Capabilities'
 layout = 'capabilities-list'
 +++
 

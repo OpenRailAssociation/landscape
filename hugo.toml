@@ -22,6 +22,6 @@ theme = 'hugo-landscape-theme'
     weight = 30
 
 [[menus.main]]
-    name = 'Capabilities'
+    name = 'All Capabilities'
     pageRef = '/capabilities'
     weight = 40

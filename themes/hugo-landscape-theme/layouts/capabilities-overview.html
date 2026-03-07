@@ -1,62 +1,7 @@
 {{ define "main" }}
-{{- with resources.Get "css/capabilities-overview.css" }}
-<link rel="stylesheet" href="{{ .RelPermalink }}">
-{{- end }}
 <div class="capabilities-overview">
   <h1>{{ .Title }}</h1>
   <div class="intro">{{ .Content }}</div>
-
-  <div class="map">
-    <a href="#sales" class="sales">
-      <h2>Market and Sale Services</h2>
-    </a>
-
-    <a href="#management" class="management">
-      <h2>Provide General Management and Administration</h2>
-    </a>
-
-    <a href="#inform-customer" class="inform-customer">
-      <h2>Inform Customer</h2>
-    </a>
-
-    <a href="#operations" class="operations">
-      <h2>Perform passenger and freight transport operations</h2>
-    </a>
-
-    <a href="#infrastructure" class="infrastructure">
-      <h2>Provide Railway Infrastructure</h2>
-    </a>
-
-    <a href="#capacity" class="capacity">
-      <h2>Manage Network Capacity</h2>
-    </a>
-
-    <a href="#rolling-stock" class="rolling-stock">
-      <h2>Provide Rolling Stock</h2>
-    </a>
-
-    <a href="#personnel" class="personnel">
-      <h2>Provide Personnel</h2>
-    </a>
-
-    <a href="#it" class="it">
-      <h2>Provide Information Technology</h2>
-    </a>
-  </div>
-
-  <section class="legend">
-    <div class="legend-grid">
-      <div class="legend-blocks">
-        <h2>Capability Type:</h2>
-        <ul class="legend-list">
-          <li><span class="swatch service-offer"></span> Service Offer</li>
-          <li><span class="swatch transport-operation"></span> Transport Operation</li>
-          <li><span class="swatch transport-resources"></span> Transport Resources</li>
-          <li><span class="swatch not-rail-specific"></span> Not Rail Specific</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
   <div class="capabilities-list">
     {{ $capabilities := slice
@@ -88,22 +33,14 @@
             {{ end }}
           {{ end }}
           {{ if $matchingProjects }}
-            <ul>
+            <div class="project-grid">
               {{ range sort $matchingProjects "Title" }}
-                <li>
-                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                  {{ with .Params.capabilities }}
-                    {{ range . }}
-                      {{ if hasPrefix . $capabilityPrefix }}
-                        ({{ . }})
-                      {{ end }}
-                    {{ end }}
-                  {{ end }}
-                  <br>
-                  {{ .Summary }}
-                </li>
+                <article class="project-card">
+                  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                  <p>{{ .Summary }}</p>
+                </article>
               {{ end }}
-            </ul>
+            </div>
           {{ else }}
             <p><em>No projects yet</em></p>
           {{ end }}
