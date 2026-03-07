@@ -5,3 +5,18 @@ theme = 'hugo-landscape-theme'
 
 [taxonomies]
     capability = 'capabilities'
+
+[[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+
+[[menus.main]]
+    name = 'Projects'
+    pageRef = '/projects'
+    weight = 20
+
+[[menus.main]]
+    name = 'Capabilities Overview'
+    pageRef = '/capabilities-overview'
+    weight = 30

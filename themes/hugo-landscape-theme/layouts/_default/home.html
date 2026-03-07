@@ -1,8 +1,3 @@
 {{ define "main" }}
   {{ .Content }}
-
-  {{ range sort site.RegularPages "Title" }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
 {{ end }}
