@@ -5,27 +5,27 @@
 
   <div class="project-metadata">
     {{ with .Params.url }}
-      <p><strong>Repository:</strong> <a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a></p>
+      <p><span class="metadata-label">Repository:</span> <a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a></p>
     {{ end }}
 
     {{ with .Params.license }}
-      <p><strong>License:</strong> {{ . }}</p>
+      <p><span class="metadata-label">License:</span> {{ . }}</p>
     {{ end }}
 
     {{ with .Params.developmentStatus }}
-      <p><strong>Development Status:</strong> {{ . }}</p>
+      <p><span class="metadata-label">Development Status:</span> {{ . }}</p>
     {{ end }}
 
     {{ with .Params.softwareType }}
-      <p><strong>Software Type:</strong> {{ . }}</p>
+      <p><span class="metadata-label">Software Type:</span> {{ . }}</p>
     {{ end }}
 
     {{ with .Params.platforms }}
-      <p><strong>Platforms:</strong> {{ delimit . ", " }}</p>
+      <p><span class="metadata-label">Platforms:</span> {{ delimit . ", " }}</p>
     {{ end }}
 
     {{ with .Params.availableLanguages }}
-      <p><strong>Available Languages:</strong> {{ delimit . ", " }}</p>
+      <p><span class="metadata-label">Available Languages:</span> {{ delimit . ", " }}</p>
     {{ end }}
   </div>
 

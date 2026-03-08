@@ -4,7 +4,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 2rem 1rem;
-  max-width: 900px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   background: #f8f9fa;
@@ -88,8 +88,13 @@ main h2 a:hover {
 footer {
   text-align: center;
   color: #7f8c8d;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   padding: 1rem;
+}
+
+footer a {
+  color: #7f8c8d;
+  text-decoration: underline;
 }
 
 a {
@@ -111,6 +116,10 @@ code {
   padding: 0.2rem 0.4rem;
   border-radius: 3px;
   font-size: 0.9em;
+}
+
+.metadata-label {
+  font-weight: 600;
 }
 
 .capability-category {

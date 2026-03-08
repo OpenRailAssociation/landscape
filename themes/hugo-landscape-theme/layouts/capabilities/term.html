@@ -5,7 +5,7 @@
   <div class="capabilities-list">
     {{ range .Pages }}
       <div class="capability-item">
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         {{ if .Description }}
           <p>{{ .Description }}</p>
         {{ else }}
@@ -16,7 +16,7 @@
         {{ $capability := .Title }}
         {{ $projects := where .Site.RegularPages "Params.capabilities" "intersect" (slice $capability) }}
         {{ with $projects }}
-          <h3>Projects:</h3>
+          <h4>Projects:</h4>
           <ul>
             {{ range . }}
               <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
