@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="capabilities-overview">
+  <h1>{{ .Title }}</h1>
+  <div class="intro">{{ .Content }}</div>
+
+  <div class="capabilities-list">
+    {{ $capabilities := slice
+      (dict "id" "sales" "name" "Market and Sale Services")
+      (dict "id" "management" "name" "Provide General Management and Administration")
+      (dict "id" "inform-customer" "name" "Inform Customer")
+      (dict "id" "operations" "name" "Perform passenger and freight transport operations")
+      (dict "id" "infrastructure" "name" "Provide Railway Infrastructure")
+      (dict "id" "capacity" "name" "Manage Network Capacity")
+      (dict "id" "rolling-stock" "name" "Provide Rolling Stock")
+      (dict "id" "personnel" "name" "Provide Personnel")
+      (dict "id" "it" "name" "Provide Information Technology")
+    }}
+    {{ range $capabilities }}
+      {{ $capabilityPrefix := printf "%s/" .id }}
+      <section class="capability-section">
+        <h2 id="{{ .id }}">{{ .name }}</h2>
+        <div class="projects-list">
+          {{ $matchingProjects := slice }}
+          {{ range $.Site.RegularPages }}
+            {{ $page := . }}
+            {{ if .Params.capabilities }}
+              {{ range .Params.capabilities }}
+                {{ if hasPrefix . $capabilityPrefix }}
+                  {{ $matchingProjects = $matchingProjects | append $page }}
+                  {{ break }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          {{ if $matchingProjects }}
+            <div class="project-grid">
+              {{ range sort $matchingProjects "Title" }}
+                <article class="project-card">
+                  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                  <p>{{ .Summary }}</p>
+                </article>
+              {{ end }}
+            </div>
+          {{ else }}
+            <p><em>No projects yet</em></p>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

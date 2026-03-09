@@ -2,5 +2,32 @@
   <h1>{{ .Title }}</h1>
 
   {{ .Content }}
+
+  <div class="project-metadata">
+    {{ with .Params.url }}
+      <p><span class="metadata-label">Repository:</span> <a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a></p>
+    {{ end }}
+
+    {{ with .Params.license }}
+      <p><span class="metadata-label">License:</span> {{ . }}</p>
+    {{ end }}
+
+    {{ with .Params.developmentStatus }}
+      <p><span class="metadata-label">Development Status:</span> {{ . }}</p>
+    {{ end }}
+
+    {{ with .Params.softwareType }}
+      <p><span class="metadata-label">Software Type:</span> {{ . }}</p>
+    {{ end }}
+
+    {{ with .Params.platforms }}
+      <p><span class="metadata-label">Platforms:</span> {{ delimit . ", " }}</p>
+    {{ end }}
+
+    {{ with .Params.availableLanguages }}
+      <p><span class="metadata-label">Available Languages:</span> {{ delimit . ", " }}</p>
+    {{ end }}
+  </div>
+
   {{ partial "terms.html" (dict "taxonomy" "capabilities" "page" .) }}
 {{ end }}

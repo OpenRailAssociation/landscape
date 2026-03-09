@@ -1,0 +1,23 @@
+publiccodeYmlVersion: "0.4"
+
+name: OpenTripPlanner
+url: "https://github.com/opentripplanner/OpenTripPlanner"
+platforms:
+  - web
+
+developmentStatus: stable
+
+softwareType: "standalone/web"
+
+description:
+  en:
+    shortDescription: >
+          An open source multi-modal trip planner
+
+legal:
+  license: LGPL-3.0-or-later
+
+businessCapabilities:
+  profile: railway
+  capabilities:
+    - inform-customer/trip-planning
