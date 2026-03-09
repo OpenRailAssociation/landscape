@@ -2,16 +2,36 @@
   <h1>{{ .Title }}</h1>
   {{ .Content }}
 
-  <div class="capabilities-list">
-    {{ range .Pages }}
-      <div class="capability-item">
-        <h2><a href="{{ .RelPermalink }}">{{ partial "format-capability" .Title }}</a></h2>
-        {{ if .Description }}
-          <p>{{ .Description }}</p>
-        {{ else }}
-          {{ .Summary }}
+  {{ $capabilities := partial "capabilities-data.html" }}
+
+  {{ range $catId, $category := $capabilities }}
+    <section class="capability-category">
+      <h2>{{ $category.name }}</h2>
+      {{ with $category.desc }}<p><em>{{ . }}</em></p>{{ end }}
+      <div class="capability-items">
+        {{ range $category.items }}
+          <div class="capability-item">
+            <h3>{{ .name }}</h3>
+            {{ $capabilityId := .id }}
+            {{ $matchingProjects := slice }}
+            {{ range $.Site.RegularPages }}
+              {{ $page := . }}
+              {{ if .Params.capabilities }}
+                {{ range .Params.capabilities }}
+                  {{ if or (eq . $capabilityId) (hasPrefix . (printf "%s/" $capabilityId)) }}
+                    {{ $matchingProjects = $matchingProjects | append $page }}
+                    {{ break }}
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            {{ if gt (len $matchingProjects) 0 }}
+              <small>(<a href="../capabilities/{{ .id }}">{{ len $matchingProjects }} {{ if eq (len $matchingProjects) 1 }}project{{ else }}projects{{ end }}</a>)</small>
+            {{ end }}
+            <p>{{ .desc }}</p>
+          </div>
         {{ end }}
       </div>
-    {{ end }}
-  </div>
+    </section>
+  {{ end }}
 {{ end }}
