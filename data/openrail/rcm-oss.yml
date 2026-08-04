@@ -26,6 +26,5 @@ businessCapabilities:
   capabilities:
     - infrastructure/rail-network
 
-roadmap:
-url: "https://github.com/OpenRailAssociation/rcm-dx/blob/main/RCM_OSS_Roadmap"
+roadmap: "https://github.com/OpenRailAssociation/rcm-dx/blob/main/RCM_OSS_Roadmap"
 
