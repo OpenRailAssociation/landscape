@@ -26,3 +26,5 @@ businessCapabilities:
   capabilities:
     - infrastructure/rail-network
 
+roadmap: "https://github.com/OpenRailAssociation/rcm-dx/blob/main/ROADMAP.md"
+
