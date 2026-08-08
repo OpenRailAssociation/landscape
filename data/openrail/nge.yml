@@ -1,8 +1,10 @@
 publiccodeYmlVersion: "0.4"
 
 name: Netzgrafik-Editor
-url: "https://github.com/SchweizerischeBundesbahnen/netzgrafik-editor-frontend"
-
+url: "https://github.com/OpenRailAssociation/netzgrafik-editor-frontend"
+platforms:
+  - web
+  
 developmentStatus: stable
 
 softwareType:
@@ -20,6 +22,7 @@ localisation:
   availableLanguages:
     - en
     - de
+    - fr
 
 businessCapabilities:
   profile: railway
